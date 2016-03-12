@@ -1,4 +1,4 @@
 (ns env.ios.main
-  (:require [cljsrnapp.android.core :as core]))
+  (:require [cljsrnapp.ios.core :as core]))
 
 (core/init)
