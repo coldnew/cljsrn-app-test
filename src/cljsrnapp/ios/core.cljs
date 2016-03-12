@@ -7,6 +7,15 @@
 
 (set! js/React (js/require "react-native"))
 
+(comment
+  ;; Examples without natal-shell
+  (defn adapt-react-element
+    [elem]
+    (fn [opts & children]
+      (apply js/React.createElement elem (clj->js opts) children)))
+
+  (def View (adapt-react-element js/React.View)))
+
 (defui MainView
   static om/IQuery
   (query [this]
