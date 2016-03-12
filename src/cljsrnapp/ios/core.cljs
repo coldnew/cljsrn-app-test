@@ -14,7 +14,10 @@
     (fn [opts & children]
       (apply js/React.createElement elem (clj->js opts) children)))
 
-  (def View (adapt-react-element js/React.View)))
+  (def View (adapt-react-element js/React.View))
+  (def Text (adapt-react-element js/React.Text))
+  (def Image (adapt-react-element js/React.Image))
+  (def Scroll (adapt-react-element js/React.ScrollView)))
 
 (defui MainView
   static om/IQuery
@@ -38,7 +41,7 @@
 
                     (touchable-highlight
                      {:style {:backgroundColor "#999" :padding 10 :borderRadius 5}
-                      :onPress #(alert "HELLO!")}
+                      :onPress #(alert "HELLO HI!")}
 
                      (text
                       {:style {:color "white" :textAlign "center" :fontWeight "bold"}}
