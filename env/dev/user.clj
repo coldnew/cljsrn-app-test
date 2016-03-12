@@ -1,4 +1,4 @@
-(ns env.dev.user
+(ns user
   (:use [figwheel-sidecar.repl-api :as figwheel]))
 
 ;; This namespace is loaded automatically by nREPL
@@ -13,6 +13,7 @@
 
 (def cljs-builds (get-in profiles [:dev :cljsbuild :builds]))
 
+;; TODO: enable switch to other place
 (defn start-repl
   "Start cljs repl for one or more builds"
   [& build-ids]
